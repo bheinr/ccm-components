@@ -1,0 +1,46 @@
+.ccm-calc > .main {
+}
+
+.ccm-calc > .main > #result {
+    background-color: gray;
+    height: 100px;
+    width: 100px;
+}
+
+.ccm-calc > .main > div > button {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 2px;
+    background-color: bisque;
+    border-radius: 6px;
+}
+
+.ccm-calc > .main > #first_row {
+
+}
+
+.ccm-calc > .main > div > #delete {
+    content: "delete";
+    width: 300px;
+    background-color: red;
+    color: white;
+}
+
+.ccm-calc > .main > div > #plus {
+}
+
+.ccm-calc > .main > div > #null {
+    width: 200px;
+}
+
+.ccm-calc > .main > div > #gleich {
+    background-color: darkgray;
+}
+
+.ccm-calc > .main > div > .calc {
+    background-color: lightgray;
+
+}
+
