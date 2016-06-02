@@ -1,55 +1,25 @@
-/**
- * @overview blank template for <i>ccm</i> components
- * @author André Kless <andre.kless@web.de> 2016
- * @license The MIT License (MIT)
- */
-ccm.component( {
+ccm.component({
 
-  /*-------------------------------------------- public component members --------------------------------------------*/
+    /*-------------------------------------------- public component members --------------------------------------------*/
 
-  /**
-   * @summary unique component name
-   * @memberOf ccm.components.blank
-   * @type {ccm.type.name}
-   */
-  name: 'blank',
+    name: 'calc',
 
-  /*-------------------------------------------- public component classes --------------------------------------------*/
+    /*-------------------------------------------- public component classes --------------------------------------------*/
 
-  /**
-   * @summary constructor for creating <i>ccm</i> instances out of this component
-   * @class
-   */
-  Instance: function () {
+    Instance: function () {
 
-    /*------------------------------------------- public instance methods --------------------------------------------*/
+        /*------------------------------------------- public instance methods --------------------------------------------*/
+        this.render = function (callback) {
 
-    /**
-     * @summary render content in own website area
-     * @param {function} [callback] - callback when content is rendered
-     */
-    this.render = function ( callback ) {
+            var element = ccm.helper.element(this);
 
-      /**
-       * website area for own content
-       * @type {ccm.type.element}
-       */
-      var element = ccm.helper.element( this );
 
-      // set content of own website area
-      element.html( 'Hello, World!' );
+            if (callback) callback();
 
-      // perform callback
-      if ( callback ) callback();
+        }
 
     }
 
-  }
+    /*------------------------------------------------ type definitions ------------------------------------------------*/
 
-  /*------------------------------------------------ type definitions ------------------------------------------------*/
-
-  /**
-   * @namespace ccm.components.blank
-   */
-
-} );
+});
