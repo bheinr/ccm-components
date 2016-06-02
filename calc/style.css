@@ -1,10 +1,21 @@
-.ccm-calc > .main {
+.ccm-calc {
+    text-align: center;
 }
 
 .ccm-calc > .main > #result {
     background-color: gray;
-    height: 100px;
-    width: 100px;
+    height: 60px;
+    width: 400px;
+    margin: auto;
+    border-radius: 2px;
+    font-size: 30px;
+    color: white;
+    display: block;
+    outline: none;
+    overflow: hidden;
+    letter-spacing: 2px;
+    padding-top: 30px;
+    text-align: right;
 }
 
 .ccm-calc > .main > div > button {
@@ -15,6 +26,7 @@
     margin-top: 2px;
     background-color: bisque;
     border-radius: 6px;
+
 }
 
 .ccm-calc > .main > #first_row {
