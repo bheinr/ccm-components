@@ -6,7 +6,7 @@ ccm.component({
     
     config: {
         html:  [ ccm.store, { local: 'templates.json' } ],
-        style: [ ccm.load, 'style.css' ],
+        style: [ ccm.load, 'style.css' ]
 
 
     },
@@ -17,15 +17,14 @@ ccm.component({
 
         var self = this;
 
-
         /*------------------------------------------- public instance methods --------------------------------------------*/
 
 
+
         self.render = function (callback) {
-
             var element = ccm.helper.element(this);
-            element.html(ccm.helper.html(self.html.get('main')));
 
+            element.html(ccm.helper.html(self.html.get('main')));
             if (callback) callback();
 
         };
