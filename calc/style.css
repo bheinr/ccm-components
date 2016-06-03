@@ -34,7 +34,6 @@
 }
 
 .ccm-calc > .main > div > #delete {
-    content: "delete";
     width: 300px;
     background-color: red;
     color: white;

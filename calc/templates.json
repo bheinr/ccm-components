@@ -8,7 +8,7 @@
         "tag": "div",
         "class": "result",
         "id": "result",
-        "inner": "%name%"
+        "inner": "%text%"
       },
       {
         "tag": "div",

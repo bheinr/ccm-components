@@ -33,7 +33,9 @@ ccm.component({
         function result() {
             element.html( ccm.helper.html( self.html.get( 'main' ) ) );
             var result_div = ccm.helper.find( self, '.result' );
-            result_div.html("test");
+            result_div.append( ccm.helper.html( self.html.get( 'message' ), {
+                text: "asmkd"
+            } ) );
             if ( callback ) callback();
         }
 
