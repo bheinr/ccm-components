@@ -156,7 +156,11 @@ ccm.component({
                 var result2 = 0;
 
                 if (result[1] === "+") {
-                    result2 = parseInt(result[0]) + parseInt(result [2]);
+                    result2 = parseFloat(result[0]) + parseFloat(result [2]);
+
+                    //TODO .foFixed
+
+
                 } else if (result[1] === "-") {
                     result2 = result[0] - result [2];
                 } else if (result[1] === "*") {
@@ -169,6 +173,7 @@ ccm.component({
                 output_store = "";
                 last_was_calc = true;
             });
+
 
 
             if (callback) callback();
