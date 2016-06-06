@@ -1,3 +1,27 @@
+/**
+
+ * @overview <i>ccm</i> component for a simple calculator
+
+ * @author Benjamin Heinrichs 2016
+
+ * @license Apache Licence 2.0
+
+ */
+
+/*Copyright [2016] [Benjamin Heinrichs]
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+limitations under the License.*/
+
 ccm.component({
 
     /*-------------------------------------------- public component members --------------------------------------------*/
@@ -13,6 +37,11 @@ ccm.component({
 
     /*-------------------------------------------- public component classes --------------------------------------------*/
 
+    /**
+     * @summary constructor for creating <i>ccm</i> instances out of this component
+     * @class
+     */
+
     Instance: function () {
         var self = this;
         var output_store = "";
@@ -20,7 +49,10 @@ ccm.component({
 
         /*------------------------------------------- public instance methods --------------------------------------------*/
 
-
+        /** render calculator in own website area
+         * @summary initialize <i>ccm</i> instance
+         * @param {function} callback callback when ccm instance is rendered (first parameter is ccm instance)
+         * */
         self.render = function (callback) {
             var element = ccm.helper.element(self);
             element.html(ccm.helper.html(self.html.get('main')));
