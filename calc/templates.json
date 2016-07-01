@@ -1,4 +1,5 @@
 {
+
   "main": {
     "tag": "div",
     "class": "main",
@@ -9,6 +10,31 @@
         "class": "result",
         "id": "result",
         "inner": "%text%"
+      },
+      {
+        "tag": "div",
+        "class": "results_right",
+        "id": "result_right",
+        "inner": [
+          {
+            "tag": "div",
+            "id": "result_right_1",
+            "inner": "Your last Results:"
+
+          },
+
+          {
+            "tag": "div",
+            "id": "result_right_2",
+            "inner": ""
+
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "results_right_menu",
+        "inner": "Results"
       },
       {
         "tag": "div",
@@ -123,7 +149,7 @@
           {
             "tag": "button",
             "id": "kom",
-            "inner": ","
+            "inner": "."
           },
           {
             "tag": "button",

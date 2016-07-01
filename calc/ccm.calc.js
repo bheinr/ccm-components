@@ -56,6 +56,7 @@ ccm.component({
         self.render = function (callback) {
             var element = ccm.helper.element(self);
             element.html(ccm.helper.html(self.html.get('main')));
+
             output(0);
 
             var eins = ccm.helper.find(self, "#eins");
@@ -78,20 +79,19 @@ ccm.component({
                 if (IsNumeric(character)) {
                     keyPressNoCalc(character)
                 } else if (character === "-") {
-                   keyPressIsCalc(" - ")
+                    keyPressIsCalc(" - ")
                 } else if (character === "+") {
                     keyPressIsCalc(" + ")
                 } else if (character === "*") {
                     keyPressIsCalc(" * ")
                 } else if (character === "/") {
                     keyPressIsCalc(" / ")
-                } else if (character === ",") {
+                } else if (character === ".") {
                     keyPressIsCalc(",")
 
                 }
 
             };
-
 
             var zwei = ccm.helper.find(self, "#zwei");
             zwei.click(function () {
@@ -187,9 +187,6 @@ ccm.component({
                 if (result[1] === "+") {
                     result2 = parseFloat(result[0]) + parseFloat(result [2]);
 
-                    //TODO .foFixed
-
-
                 } else if (result[1] === "-") {
                     result2 = result[0] - result [2];
                 } else if (result[1] === "*") {
@@ -199,14 +196,23 @@ ccm.component({
                 }
 
                 output(result2);
-                output_store = "";
-                last_was_calc = true;
+                output_store = result2;
+                last_was_calc = false;
+                output_2(result[0], result[1], result[2], result2);
             });
 
+            result_div2 = ccm.helper.find(self, '#result_right_2');
+            var result_div3 = ccm.helper.find(self, '#results_right_menu');
+            result_div3.click(function () {
+                document.getElementById("result_right").style.right = "0%"
+
+
+            });
 
             if (callback) callback();
 
         };
+
 
         function keyPressNoCalc(key) {
             storeOutput(key);
@@ -224,7 +230,13 @@ ccm.component({
             var result_div = ccm.helper.find(self, '#result');
             result_div.html(number);
 
+        }
 
+        var last_results = "";
+
+        function output_2(result0, result1, result2, result) {
+            last_results = last_results + result0 + " " + result1 + " " + result2 + " = " + result + " <br> ";
+            result_div2.html(last_results);
         }
 
         function storeOutput(number) {
